@@ -1,0 +1,74 @@
+/* Creates a simple neutral background and one readable default font for every page. */
+body {
+    background-color: #eeeeee;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Separates the page title and navigation from the main content with a blue background. */
+header {
+    background-color: lightblue;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Makes the navigation links stand out from the light-blue header. */
+nav a {
+    color: darkblue;
+}
+
+/* Centers the content and places it on white so the text is easy to read. */
+main {
+    background-color: white;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Limits each photo to the content width so it does not stretch beyond the page. */
+img {
+    display: block;
+    width: 600px;
+    max-width: 100%;
+    margin: 15px auto;
+}
+
+/* Gives the first paragraph larger blue Arial text. */
+.paragraph-one {
+    color: darkblue;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+/* Gives the second paragraph green italic Georgia text for a different appearance. */
+.paragraph-two {
+    color: darkgreen;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+/* Gives the third paragraph red Courier text and a highlighted background. */
+.paragraph-three {
+    color: darkred;
+    font-family: "Courier New", monospace;
+    background-color: #fff3cd;
+    padding: 10px;
+}
+
+/* Adds borders and spacing so the table rows and columns are easy to follow. */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: lightgray;
+}

@@ -1,0 +1,60 @@
+/*
+ABOUT PAGE COLOR PALETTE
+
+Light Gray:  #eeeeee
+Light Blue:  #add8e6
+Dark Blue:   #00008b
+Dark Gray:   #333333
+White:       #ffffff
+Pale Yellow: #fff3cd
+Dark Green:  #006400
+Dark Red:    #8b0000
+
+FONT PALETTE
+
+Headings: Georgia, serif
+Body text: Arial, sans-serif
+*/
+
+/* Matches the background, text color, and font used by the other pages. */
+.about-page {
+    background-color: #eeeeee;
+    color: #333333;
+    font-family: Arial, sans-serif;
+}
+
+/* Uses the same light-blue header color as the other pages. */
+.about-page header {
+    background-color: #add8e6;
+    color: #333333;
+}
+
+/* Uses the same dark-blue navigation links as the other pages. */
+.about-page nav a {
+    color: #00008b;
+}
+
+/* Keeps the main content consistent with the other white page sections. */
+.about-page main {
+    background-color: #ffffff;
+    max-width: 800px;
+}
+
+/* Centers the portrait in the same way as the other website images. */
+.profile-photo {
+    display: block;
+    width: 350px;
+    max-width: 100%;
+    margin: 15px auto;
+}
+
+/* Uses the selected heading font and dark-blue palette color. */
+.about-page h2 {
+    color: #00008b;
+    font-family: Georgia, serif;
+}
+
+/* Makes the LinkedIn link match the navigation links. */
+.social-link a {
+    color: #00008b;
+}
