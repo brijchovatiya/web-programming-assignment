@@ -14,7 +14,8 @@ Included files:
 - launch.html: Page about testing and publishing a website
 - about.html: About page with my photograph, motivation, and LinkedIn profile
 - styles.css: Shared styles for the main pages
-- about-page-style.css: External stylesheet containing the About page color and font palette
+- about-page-style.css: External stylesheet containing the palette and two-level Flexbox layout
+- certificates/css-essential-training-certificate.pdf: LinkedIn Learning course certificate
 - images folder: The four images used by the pages, including my personal photograph
 
 All page links and image paths are relative, so the website works offline.

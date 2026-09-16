@@ -29,15 +29,63 @@ Body text: Arial, sans-serif
     color: #333333;
 }
 
+/*
+Creates the page layout with Flexbox. The navigation and content appear
+beside each other, and the gap adds space between the two sections.
+*/
+.page-layout {
+    background-color: #ffffff;
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    max-width: 950px;
+}
+
+/* Gives the navigation its own space on the left side of the layout. */
+.side-navigation {
+    background-color: #eeeeee;
+    border: 1px solid #add8e6;
+    flex: 0 0 180px;
+    padding: 15px;
+}
+
+/* Adds vertical space between the navigation links. */
+.side-navigation nav {
+    line-height: 2;
+}
+
 /* Uses the same dark-blue navigation links as the other pages. */
-.about-page nav a {
+.side-navigation nav a {
     color: #00008b;
 }
 
-/* Keeps the main content consistent with the other white page sections. */
-.about-page main {
-    background-color: #ffffff;
-    max-width: 800px;
+/* Allows the main About content to use the remaining Flexbox space. */
+.about-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/*
+Creates a second Flexbox inside the content area. This places the LinkedIn
+and certificate sections beside each other without changing the main layout.
+*/
+.info-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Gives both information sections equal space and a simple visible border. */
+.info-box {
+    background-color: #eeeeee;
+    border: 1px solid #add8e6;
+    flex: 1;
+    padding: 15px;
+}
+
+/* Removes extra space above the headings inside the two information boxes. */
+.info-box h2 {
+    margin-top: 0;
 }
 
 /* Centers the portrait in the same way as the other website images. */
@@ -54,7 +102,29 @@ Body text: Arial, sans-serif
     font-family: Georgia, serif;
 }
 
-/* Makes the LinkedIn link match the navigation links. */
-.social-link a {
+/* Makes the LinkedIn and certificate links match the navigation links. */
+.social-link a,
+.certificate-link a {
     color: #00008b;
+}
+
+/*
+Stacks the navigation above the content on small screens so the layout
+is easier to read on a phone.
+*/
+@media (max-width: 700px) {
+    .page-layout {
+        flex-direction: column;
+    }
+
+    .side-navigation {
+        box-sizing: border-box;
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    /* Stacks the two information boxes on narrow screens. */
+    .info-row {
+        flex-direction: column;
+    }
 }

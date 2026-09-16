@@ -17,67 +17,104 @@
 <body class="about-page">
     <header>
         <h1>About Me</h1>
-
-        <!-- Connects the About page to the other pages using relative links. -->
-        <nav>
-            <a href="index.html">Home</a><br>
-            <a href="styling.html">Designing the Pages</a><br>
-            <a href="launch.html">Testing the Website</a><br>
-            <a href="about.html">About Me</a>
-        </nav>
     </header>
 
-    <main>
-        <!-- Personal photograph stored in the local images folder. -->
-        <img
-            class="profile-photo"
-            src="images/brij-chovatiya.jpeg"
-            alt="Professional portrait of Brij Chovatiya"
-        >
+    <!-- Flexbox places the navigation and About content next to each other. -->
+    <main class="page-layout">
+        <!-- Holds the navigation links in the left part of the layout. -->
+        <aside class="side-navigation">
+            <h2>Navigation</h2>
 
-        <h2>Hello, I am Brij</h2>
+            <nav>
+                <a href="index.html">Home</a><br>
+                <a href="styling.html">Designing the Pages</a><br>
+                <a href="launch.html">Testing the Website</a><br>
+                <a href="about.html">About Me</a>
+            </nav>
+        </aside>
 
-        <!-- Reuses the three paragraph styles found on the other pages. -->
-        <p class="paragraph-one">
-            My name is Brij Chovatiya, and I am a Computer Science
-            student with a minor in Actuarial Science at Georgia State
-            University. I created this website as a practical way to
-            improve my understanding of HTML and CSS.
-        </p>
-
-        <p class="paragraph-two">
-            I was motivated to learn web programming because it is a
-            useful skill that could help me create a side hustle. I
-            would like to build simple websites for students, local
-            businesses, restaurants, and other people who need an
-            online presence.
-        </p>
-
-        <p class="paragraph-three">
-            Web programming interests me because I can see the result
-            of my work immediately. I can change the code, refresh the
-            browser, and observe how the page changes. This makes the
-            learning process creative as well as technical.
-        </p>
-
-        <p>
-            Creating this website has helped me practice page
-            structure, navigation, images, color choices, and external
-            stylesheets. As I learn more, I hope to build websites that
-            are attractive, useful, and easy for visitors to navigate.
-        </p>
-
-        <h2>Connect With Me</h2>
-
-        <p class="social-link">
-            <a
-                href="https://www.linkedin.com/in/brijchovatiya14/"
-                target="_blank"
-                rel="noopener noreferrer"
+        <!-- Holds the photograph and written content in the larger section. -->
+        <section class="about-content">
+            <img
+                class="profile-photo"
+                src="images/brij-chovatiya.jpeg"
+                alt="Professional portrait of Brij Chovatiya"
             >
-                Visit my LinkedIn profile
-            </a>
-        </p>
+
+            <h2>Hello, I am Brij</h2>
+
+            <!-- Reuses the three paragraph styles found on the other pages. -->
+            <p class="paragraph-one">
+                My name is Brij Chovatiya, and I am a Computer Science
+                student with a minor in Actuarial Science at Georgia State
+                University. I created this website as a practical way to
+                improve my understanding of HTML and CSS.
+            </p>
+
+            <p class="paragraph-two">
+                I was motivated to learn web programming because it is a
+                useful skill that could help me create a side hustle. I
+                would like to build simple websites for students, local
+                businesses, restaurants, and other people who need an
+                online presence.
+            </p>
+
+            <p class="paragraph-three">
+                Web programming interests me because I can see the result
+                of my work immediately. I can change the code, refresh the
+                browser, and observe how the page changes. This makes the
+                learning process creative as well as technical.
+            </p>
+
+            <p>
+                Creating this website has helped me practice page
+                structure, navigation, images, color choices, and external
+                stylesheets. As I learn more, I hope to build websites that
+                are attractive, useful, and easy for visitors to navigate.
+            </p>
+
+            <!-- A nested Flexbox creates two smaller sections inside the content. -->
+            <div class="info-row">
+                <section class="info-box">
+                    <h2>Connect With Me</h2>
+
+                    <p>
+                        I use LinkedIn to share my education and professional
+                        experience.
+                    </p>
+
+                    <p class="social-link">
+                        <a
+                            href="https://www.linkedin.com/in/brijchovatiya14/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Visit my LinkedIn profile
+                        </a>
+                    </p>
+                </section>
+
+                <section class="info-box">
+                    <h2>CSS Course Certificate</h2>
+
+                    <p>
+                        I completed the CSS Essential Training course through
+                        LinkedIn Learning.
+                    </p>
+
+                    <!-- Opens the certificate included in the repository. -->
+                    <p class="certificate-link">
+                        <a
+                            href="certificates/css-essential-training-certificate.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View my certificate of completion
+                        </a>
+                    </p>
+                </section>
+            </div>
+        </section>
     </main>
 </body>
 </html>
