@@ -7,6 +7,8 @@
     <title>Why I Am Learning Web Programming</title>
     <!-- Uses the shared CSS file so the main pages have consistent formatting. -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Loads the theme code after the page elements are ready. -->
+    <script src="theme.js" defer></script>
 </head>
 <body>
     <!-- Gives the page a title and lets visitors move between the four local pages. -->
@@ -18,6 +20,8 @@
             <a href="launch.html">Testing the Website</a><br>
             <a href="about.html">About Me</a>
         </nav>
+        <!-- Lets visitors choose an alternate color theme on every page. -->
+        <button id="theme-toggler" class="theme-button" type="button">Switch to dark theme</button>
     </header>
 
     <!-- Holds the photo and personal explanation of why I am learning web programming. -->

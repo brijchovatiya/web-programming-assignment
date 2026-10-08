@@ -12,11 +12,15 @@
 
     <!-- Uses a separate external stylesheet for the About page. -->
     <link rel="stylesheet" href="about-page-style.css">
+    <!-- Loads the theme code after the page elements are ready. -->
+    <script src="theme.js" defer></script>
 </head>
 
 <body class="about-page">
     <header>
         <h1>About Me</h1>
+        <!-- Lets visitors choose an alternate color theme on every page. -->
+        <button id="theme-toggler" class="theme-button" type="button">Switch to dark theme</button>
     </header>
 
     <!-- Flexbox places the navigation and About content next to each other. -->

@@ -1,25 +1,93 @@
-/* Creates a simple neutral background and one readable default font for every page. */
+/*
+LIGHT THEME COLOR PALETTE
+Page: #eeeeee, content: #ffffff, header: #add8e6, text: #333333.
+Links and first paragraph: #00008b, second paragraph: #006400.
+Third paragraph: #8b0000 on #fff3cd, table heading: #d3d3d3.
+CSS variables keep the colors in one place for all four pages.
+*/
+:root {
+    color-scheme: light;
+    --page-background: #eeeeee;
+    --content-background: #ffffff;
+    --header-background: #add8e6;
+    --text-color: #333333;
+    --link-color: #00008b;
+    --paragraph-one-color: #00008b;
+    --paragraph-two-color: #006400;
+    --paragraph-three-color: #8b0000;
+    --highlight-background: #fff3cd;
+    --border-color: #000000;
+    --panel-border-color: #add8e6;
+    --table-heading-background: #d3d3d3;
+    --button-background: #00008b;
+    --button-text: #ffffff;
+}
+
+/*
+DARK THEME COLOR PALETTE
+JavaScript adds dark_mode to the HTML element to replace these variables.
+The same layout rules below then use the alternate colors automatically.
+*/
+:root.dark_mode {
+    color-scheme: dark;
+    --page-background: #121820;
+    --content-background: #202a35;
+    --header-background: #243d50;
+    --text-color: #f1f5f9;
+    --link-color: #a8d8ff;
+    --paragraph-one-color: #a8d8ff;
+    --paragraph-two-color: #a6e3ad;
+    --paragraph-three-color: #ffb4b4;
+    --highlight-background: #382b22;
+    --border-color: #a4b4c4;
+    --panel-border-color: #68849c;
+    --table-heading-background: #304254;
+    --button-background: #a8d8ff;
+    --button-text: #121820;
+}
+
+/* Uses the current theme's page colors and one readable default font. */
 body {
-    background-color: #eeeeee;
+    background-color: var(--page-background);
+    color: var(--text-color);
     font-family: Arial, sans-serif;
     margin: 0;
 }
 
-/* Separates the page title and navigation from the main content with a blue background. */
+/* Separates the page title and navigation using the current header color. */
 header {
-    background-color: lightblue;
+    background-color: var(--header-background);
     text-align: center;
     padding: 15px;
 }
 
-/* Makes the navigation links stand out from the light-blue header. */
+/* Keeps links readable in both themes, including links on the About page. */
+a,
 nav a {
-    color: darkblue;
+    color: var(--link-color);
 }
 
-/* Centers the content and places it on white so the text is easy to read. */
+/* Gives every page an easy-to-find button to change the color theme. */
+.theme-button {
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: 1px solid var(--button-background);
+    border-radius: 4px;
+    padding: 10px 16px;
+    margin-top: 15px;
+    font: inherit;
+    cursor: pointer;
+}
+
+/* Makes keyboard focus visible when a visitor tabs to the button. */
+.theme-button:focus-visible {
+    outline: 3px solid var(--link-color);
+    outline-offset: 3px;
+}
+
+/* Centers the content and uses the theme's content background. */
 main {
-    background-color: white;
+    background-color: var(--content-background);
     width: 80%;
     max-width: 800px;
     margin: 20px auto;
@@ -34,25 +102,25 @@ img {
     margin: 15px auto;
 }
 
-/* Gives the first paragraph larger blue Arial text. */
+/* Gives the first paragraph larger blue Arial text in both themes. */
 .paragraph-one {
-    color: darkblue;
+    color: var(--paragraph-one-color);
     font-family: Arial, sans-serif;
     font-size: 18px;
 }
 
 /* Gives the second paragraph green italic Georgia text for a different appearance. */
 .paragraph-two {
-    color: darkgreen;
+    color: var(--paragraph-two-color);
     font-family: Georgia, serif;
     font-style: italic;
 }
 
 /* Gives the third paragraph red Courier text and a highlighted background. */
 .paragraph-three {
-    color: darkred;
+    color: var(--paragraph-three-color);
     font-family: "Courier New", monospace;
-    background-color: #fff3cd;
+    background-color: var(--highlight-background);
     padding: 10px;
 }
 
@@ -64,11 +132,11 @@ table {
 
 th,
 td {
-    border: 1px solid black;
+    border: 1px solid var(--border-color);
     padding: 8px;
     text-align: left;
 }
 
 th {
-    background-color: lightgray;
+    background-color: var(--table-heading-background);
 }

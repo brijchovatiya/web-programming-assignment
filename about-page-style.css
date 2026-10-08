@@ -1,5 +1,5 @@
 /*
-ABOUT PAGE COLOR PALETTE
+ABOUT PAGE LIGHT COLOR PALETTE
 
 Light Gray:  #eeeeee
 Light Blue:  #add8e6
@@ -10,6 +10,9 @@ Pale Yellow: #fff3cd
 Dark Green:  #006400
 Dark Red:    #8b0000
 
+The variables are defined in styles.css for both light and dark themes.
+This page shares those variables so its panels and links also change.
+
 FONT PALETTE
 
 Headings: Georgia, serif
@@ -18,15 +21,15 @@ Body text: Arial, sans-serif
 
 /* Matches the background, text color, and font used by the other pages. */
 .about-page {
-    background-color: #eeeeee;
-    color: #333333;
+    background-color: var(--page-background);
+    color: var(--text-color);
     font-family: Arial, sans-serif;
 }
 
-/* Uses the same light-blue header color as the other pages. */
+/* Uses the current theme header color, just like the other pages. */
 .about-page header {
-    background-color: #add8e6;
-    color: #333333;
+    background-color: var(--header-background);
+    color: var(--text-color);
 }
 
 /*
@@ -34,7 +37,7 @@ Creates the page layout with Flexbox. The navigation and content appear
 beside each other, and the gap adds space between the two sections.
 */
 .page-layout {
-    background-color: #ffffff;
+    background-color: var(--content-background);
     display: flex;
     gap: 25px;
     align-items: flex-start;
@@ -43,8 +46,8 @@ beside each other, and the gap adds space between the two sections.
 
 /* Gives the navigation its own space on the left side of the layout. */
 .side-navigation {
-    background-color: #eeeeee;
-    border: 1px solid #add8e6;
+    background-color: var(--page-background);
+    border: 1px solid var(--panel-border-color);
     flex: 0 0 180px;
     padding: 15px;
 }
@@ -54,9 +57,9 @@ beside each other, and the gap adds space between the two sections.
     line-height: 2;
 }
 
-/* Uses the same dark-blue navigation links as the other pages. */
+/* Shares the theme link color with the other pages. */
 .side-navigation nav a {
-    color: #00008b;
+    color: var(--link-color);
 }
 
 /* Allows the main About content to use the remaining Flexbox space. */
@@ -77,8 +80,8 @@ and certificate sections beside each other without changing the main layout.
 
 /* Gives both information sections equal space and a simple visible border. */
 .info-box {
-    background-color: #eeeeee;
-    border: 1px solid #add8e6;
+    background-color: var(--page-background);
+    border: 1px solid var(--panel-border-color);
     flex: 1;
     padding: 15px;
 }
@@ -96,16 +99,16 @@ and certificate sections beside each other without changing the main layout.
     margin: 15px auto;
 }
 
-/* Uses the selected heading font and dark-blue palette color. */
+/* Uses the selected heading font and the current theme link color. */
 .about-page h2 {
-    color: #00008b;
+    color: var(--link-color);
     font-family: Georgia, serif;
 }
 
 /* Makes the LinkedIn and certificate links match the navigation links. */
 .social-link a,
 .certificate-link a {
-    color: #00008b;
+    color: var(--link-color);
 }
 
 /*
